@@ -1,0 +1,27 @@
+{
+  "name": "fcc-api-image-search-abstraction-layer",
+  "version": "0.0.0",
+  "description": "You can get the image URLs, alt text and page urls for a set of images relating to a given search string.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "fcc",
+    "freecodecamp",
+    "api",
+    "image",
+    "search",
+    "abstraction",
+    "layer",
+    "anhkien96"
+  ],
+  "author": "Kien Nguyen <anhkien96@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "https": "1.0.0",
+    "mongoose": "4.4.17"
+  }
+}
