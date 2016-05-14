@@ -57,4 +57,4 @@ http://fcc-api-image-search.herokuapp.com/latest
 ]
 ```
 ### Live site
-[http://img-kien.herokuapp.com](http://img-kien.herokuapp.com)
+[http://fcc-api-image-search.herokuapp.com](http://fcc-api-image-search.herokuapp.com)
