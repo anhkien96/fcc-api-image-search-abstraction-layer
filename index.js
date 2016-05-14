@@ -1,4 +1,3 @@
-var imgurKey= process.env.IMGUR_KEY;
 var mongo = require('mongoose');
 
 mongo.connect(process.env.MONGODB_URI);
@@ -19,8 +18,8 @@ require('http').createServer(function(req, res) {
 function getSearch(res, q, page) {
 	var option = {
 		host: 'api.imgur.com',
-		path: '/3/gallery/search/top/'+page+'/?q='+q,
-		headers: {'Authorization': 'Client-ID '+imgurKey}
+		path: '/3/gallery/search/top/' + page + '/?q=' + q,
+		headers: {'Authorization': 'Client-ID '+ process.env.IMGUR_KEY}
 	};
 	require('https').get(option, function(get) {
 		var data = '';
