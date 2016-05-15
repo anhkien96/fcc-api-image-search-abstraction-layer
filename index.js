@@ -36,7 +36,12 @@ function getSearch(res, q, page) {
 function saveQuery(q) {
 	doc.find().limit(1).sort('-when').exec(function(err, data) {
 		if (err) throw err;
-		if (!data.length || data[0].term != q) new doc({term: q, when: new Date().toISOString()}).save();
+		var date = new Date().toISOString();
+		if (!data.length || data[0].term != q) new doc({term: q, when: date}).save();
+		if (data.length && data[0].term == q) {
+			data[0].when = date;
+			data[0].save();
+		}
 	});
 }
 
